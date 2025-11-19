@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我的收藏 - 盖茨比的世界</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/theme-pages.css" />
+  <link rel="stylesheet" href="css/bookmarks.css" />
+  <link rel="stylesheet" href="css/music-control.css" />
+</head>
+<body class="theme-page-body" data-theme="bookmarks">
+  <div class="reading-progress" id="readingProgress"></div>
+
+  <header class="theme-page-header">
+    <nav class="theme-page-nav">
+      <a href="index.html" class="nav-link">首页</a>
+      <a href="themes.html" class="nav-link">主题</a>
+      <a href="characters.html" class="nav-link">◈ 人物介绍</a>
+      <a href="reviews.html" class="nav-link">💬 影评精选</a>
+    </nav>
+  </header>
+
+  <div class="theme-banner">
+    <h1 class="banner-title">我的收藏</h1>
+    <p class="banner-subtitle">你标记的精彩段落汇总 ✨</p>
+    <div class="banner-decoration">
+      <span class="deco-star">★</span>
+      <span class="deco-line"></span>
+      <span class="deco-star">★</span>
+    </div>
+  </div>
+
+  <main class="theme-main">
+    <section class="theme-content bookmarks-container">
+      <div class="bookmarks-header">
+        <div class="stats-bar">
+          <div class="stat-item">
+            <span class="stat-number" id="totalBookmarks">0</span>
+            <span class="stat-label">总收藏</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" id="introCount">0</span>
+            <span class="stat-label">电影简介</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" id="plotCount">0</span>
+            <span class="stat-label">故事走向</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" id="insightCount">0</span>
+            <span class="stat-label">电影启迪</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" id="reviewsCount">0</span>
+            <span class="stat-label">影评精选</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" id="userCommentsCount">0</span>
+            <span class="stat-label">我的评论</span>
+          </div>
+        </div>
+        
+        <div class="actions-bar">
+          <button id="clearAllBtn" class="action-btn danger">清空全部收藏</button>
+          <button id="exportBtn" class="action-btn">导出收藏</button>
+        </div>
+      </div>
+
+      <div id="bookmarksList" class="bookmarks-list">
+        <!-- 动态加载收藏内容 -->
+      </div>
+
+      <div id="emptyState" class="empty-state" style="display: none;">
+        <div class="empty-icon">🔖</div>
+        <h3>暂无收藏</h3>
+        <p>在阅读时点击段落旁的书签图标即可收藏</p>
+        <a href="themes.html" class="cta-link">前往主题页</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="theme-page-footer">
+    <a href="themes.html" class="secondary-link">返回主题选择页</a>
+    <p>© 2025 Gatsby Experience</p>
+  </footer>
+
+  <!-- 回到顶部按钮 -->
+  <button id="backToTop" class="back-to-top" title="回到顶部">
+    <span class="arrow-up">↑</span>
+  </button>
+
+  <script src="js/bookmarks.js"></script>
+  <script src="js/background-music.js"></script>
+</body>
+</html>
