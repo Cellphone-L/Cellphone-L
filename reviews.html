@@ -1,3 +1,370 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2f9de1966d8343a89302f8dba37c4f539801d56592d87501521d9ecacb28bfb9
-size 29136
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="《了不起的盖茨比》电影影评精选" />
+  <title>盖茨比的世界 · 影评精选</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/reviews.css" />
+  <link rel="stylesheet" href="css/music-control.css" />
+</head>
+<body class="reviews-body">
+  <div class="reviews-backdrop" role="presentation" aria-hidden="true">
+    <img src="assets/images/gatsby-poster.png" alt="" />
+  </div>
+
+  <header class="reviews-header">
+    <a class="brand-link" href="index.html">Gatsby Soirée</a>
+    <nav class="header-nav">
+      <a class="nav-button" href="themes.html">
+        <span class="nav-icon">◆</span>
+        <span class="nav-text">主题精选</span>
+      </a>
+      <a class="nav-button" href="characters.html">
+        <span class="nav-icon">◈</span>
+        <span class="nav-text">人物介绍</span>
+      </a>
+      <a class="nav-button" href="bookmarks.html">
+        <span class="nav-icon">🔖</span>
+        <span class="nav-text">我的收藏</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="reviews-main">
+    <section class="reviews-hero" aria-labelledby="reviews-title">
+      <div class="hero-decoration">
+        <span class="deco-quote">❝</span>
+        <span class="deco-icon">💬</span>
+        <span class="deco-quote">❞</span>
+      </div>
+      <h1 id="reviews-title">影评精选</h1>
+      <p class="reviews-subtitle">来自影迷的声音 · 时代的共鸣</p>
+    </section>
+
+    <!-- 快速导航 -->
+    <div class="quick-nav-bar">
+      <div class="quick-nav-content">
+        <button class="filter-btn active" data-platform="all">全部</button>
+        <button class="filter-btn" data-platform="豆瓣">豆瓣</button>
+        <button class="filter-btn" data-platform="b站">B站</button>
+        <button class="filter-btn" data-platform="爱奇艺">爱奇艺</button>
+        <button class="filter-btn" data-platform="腾讯视频">腾讯视频</button>
+        <div class="nav-divider"></div>
+        <button id="scrollToMyComments" class="my-comment-nav-btn" title="跳转到我的评论">
+          <span class="nav-btn-icon">✍️</span>
+          <span class="nav-btn-text">我的评论</span>
+          <span class="my-comment-badge" id="myCommentBadge">0</span>
+        </button>
+      </div>
+    </div>
+
+    <section class="reviews-grid" aria-label="影评列表">
+      
+      <!-- 豆瓣影评 -->
+      <article class="review-card" data-platform="豆瓣" data-review-id="0">
+        <div class="review-header">
+          <span class="platform-badge douban">豆瓣</span>
+          <span class="author-name">立夏Alex</span>
+          <button class="bookmark-btn" data-review-id="0" title="收藏这条影评">
+            <span class="bookmark-icon">🔖</span>
+          </button>
+        </div>
+        <div class="review-content">
+          <p>如果打算爱一个人，你要想清楚，是否愿意为了他，放弃如上帝般自由的心灵，从此心甘情愿有了羁绊。我年纪还轻，阅历不深的时候，我父亲教导过我一句话，我至今还念念不忘。 "每逢你想要批评任何人的时候， "他对我说，"你就记住,这个世界上所有的人，并不是个个都有过你拥有的那些优越条件。"所有的光鲜亮丽都敌不过时间，并且一去不复返。</p>
+        </div>
+      </article>
+
+      <!-- B站影评 -->
+      <article class="review-card" data-platform="b站" data-review-id="1">
+        <div class="review-header">
+          <span class="platform-badge bilibili">B站</span>
+          <span class="author-name">枫木远息</span>
+          <button class="bookmark-btn" data-review-id="1" title="收藏这条影评">
+            <span class="bookmark-icon">🔖</span>
+          </button>
+        </div>
+        <div class="review-content">
+          <p>好像有点明白为什么看完后会有空荡荡的悲哀感了...物质生活的丰富与精神生活的极度匮乏，这便是那个时代所谓"美国梦"的真实。所以尼克才会告诉盖茨比："他们全都腐朽软弱，一全部加起来也比不上你一个。" 无论是年少时认为自己是上帝之子的那份野心与欲望，抑或是对矢志不渝爱情的坚定追求，这种纯粹的精神力量正是盖茨比的魅力所在。是汤姆等人无论强调多少次血缘与出身也掩盖不住的，真正属于盖茨比的"华美宝石"。</p>
+          <p>可惜这正是悲剧所在，不是盖茨比改变了时代，反而是时代影响了盖茨比。经历过战争与巨大阶层差异的盖茨比把一切对美好的期盼放在遥不可及的"黛西"身上。所谓上流阶层的规则究竟是什么？他看不透。是华美的住宅吗？是汇聚着各地名流的晚宴吗？是显赫的身份吗？是万贯家产？是绫罗绸缎？到底是什么？他像急切求偶的雄鸟，把所有看似华丽的装饰品都衔来修饰自己的羽毛。他的焦虑与执念与日俱增，他"拥有"的越多，越迷茫，越不知所措。</p>
+          <p>他明明拥有着孤注一掷的勇气和最纯粹美好的内心，却始终没能被社会认可与尊重。</p>
+          <p>他的真心，他的真心啊，一文不值。</p>
+        </div>
+      </article>
+
+      <article class="review-card" data-platform="b站" data-review-id="2">
+        <div class="review-header">
+          <span class="platform-badge bilibili">B站</span>
+          <span class="author-name">sneust</span>
+          <button class="bookmark-btn" data-review-id="2" title="收藏这条影评">
+            <span class="bookmark-icon">🔖</span>
+          </button>
+        </div>
+        <div class="review-content">
+          <p>没有谁能够一生无瑕。当盖茨比无数次地重复着 黛西从来没有爱过汤姆 时，也是在逃避自己的穷苦出身。最后黛西的退缩和汤姆的鄙视彻底打碎了这个极端理想主义者的完美的梦。</p>
+          <p>盖茨比的死亡也出现得恰到好处。在他面临美梦破碎的绝望却仍在自欺欺人时，这场意外的死亡替他选择了为美梦殉葬。</p>
+        </div>
+      </article>
+
+      <article class="review-card" data-platform="b站" data-review-id="3">
+        <div class="review-header">
+          <span class="platform-badge bilibili">B站</span>
+          <span class="author-name">巴列大公</span>
+          <button class="bookmark-btn" data-review-id="3" title="收藏这条影评">
+            <span class="bookmark-icon">🔖</span>
+          </button>
+        </div>
+        <div class="review-content">
+          <p>有人背弃了上帝赋予的自由只为索要拥吻，有人能为了金钱与浮华将一颗熠熠生辉的心脏送入坟墓。他的爱纤尘不染，而他爱的人却面目全非。她从头到尾最爱只有自己。变质的灵魂配不上那颗从未腐烂的真心。</p>
+        </div>
+      </article>
+
+      <!-- 爱奇艺影评 -->
+      <article class="review-card" data-platform="爱奇艺" data-review-id="4">
+        <div class="review-header">
+          <span class="platform-badge iqiyi">爱奇艺</span>
+          <span class="author-name">llegawllllll</span>
+          <button class="bookmark-btn" data-review-id="4" title="收藏这条影评">
+            <span class="bookmark-icon">🔖</span>
+          </button>
+        </div>
+        <div class="review-content">
+          <p>影片给我们展现了一段凄美的爱情，而这段爱情中夹杂着欺骗，执念，等待，犹豫等，正是这些使这段爱情走向死亡，也许到最后可以说已经不是爱情了，而是坚持了很久的事一定要做到，也或许盖茨比异于普通人的一点就是他的初心能永远不变始终对她是最忠贞的爱，只是感叹人生不如意的事太多了，盖茨比的事其实很简单就能实现的，但中间穿插了太多事，他的爱人无法说出能使他终生稳定的话，回过头仔细想想细节，决定了一切，比如盖茨比正好和汤姆换了车，还有天生就改变不了的出身，要冲破桎梏需要两个人非常坚决且同时付出巨大努力。我觉得还应该包括黛西安全感的缺失和敏感。最让我心痛的是黛西走前都不知道最爱她的人的逝去，一个陌生人都成了千般阻挠他们爱情的人，也许等她归来已是白发苍苍，她才知晓一切，就好像《泰坦尼克号》片头和片尾老奶奶出现时让人心绞痛的程度。最后我觉得我必须得提，也是我最喜爱的人尼克，让我看到了他对朋友的尊敬与爱，也是最使我感动的，当众人皆离你而去，我会在这里，也是因为你的离开这座城市于我再黯淡无光。</p>
+        </div>
+      </article>
+
+      <article class="review-card" data-platform="爱奇艺" data-review-id="5">
+        <div class="review-header">
+          <span class="platform-badge iqiyi">爱奇艺</span>
+          <span class="author-name">颖优妮</span>
+          <button class="bookmark-btn" data-review-id="5" title="收藏这条影评">
+            <span class="bookmark-icon">🔖</span>
+          </button>
+        </div>
+        <div class="review-content">
+          <p>了不起的盖茨比，他是真正的梦想家，也是行动家，爱的纯粹，爱的执着，爱的深刻，唯独爱的不清醒，画面有一种不真实的美，美的像童话，又像是梦境，可能就像盖茨比的爱情一样，美丽却又不真实，但是我们却深深的难过，也许我们也有过种种不真实的梦，可是却被自己的渺小打败了，唯独盖茨比是了不起的，因为他真正的付出了，努力了，得到了，也失去了，所以他无憾了，而我们，继续在自己的平静生活里苟且着就好了，注定我们平凡，注定我们也会心疼盖茨比，他做到了我们注定做不到的，他是了不起的盖茨比，敬他一生</p>
+        </div>
+      </article>
+
+      <article class="review-card" data-platform="爱奇艺" data-review-id="6">
+        <div class="review-header">
+          <span class="platform-badge iqiyi">爱奇艺</span>
+          <span class="author-name">用户a05d1582</span>
+          <button class="bookmark-btn" data-review-id="6" title="收藏这条影评">
+            <span class="bookmark-icon">🔖</span>
+          </button>
+        </div>
+        <div class="review-content">
+          <p>那个奢侈至极的宴会上，在所有不请自来的人中，你是唯一一个受我邀请的；在我的葬礼上，所有人都避之不及，你也是唯一一个守护我的人。</p>
+        </div>
+      </article>
+
+      <article class="review-card" data-platform="爱奇艺" data-review-id="7">
+        <div class="review-header">
+          <span class="platform-badge iqiyi">爱奇艺</span>
+          <span class="author-name">徐徐徐鹏展</span>
+          <button class="bookmark-btn" data-review-id="7" title="收藏这条影评">
+            <span class="bookmark-icon">🔖</span>
+          </button>
+        </div>
+        <div class="review-content">
+          <p>"绿光"就像是盖茨比一直在追求的东西，近的就在眼前，却又被层层迷雾包围，是黛西，也是高贵的血统尊贵的身份。他是穷人家的孩子，却又不甘只是这样过一生，所以才会出海，抓住种种际遇，他既乐观，又自自卑。他以为豪华的"城堡"是黛西想要的，确一次次错过黛西，却不知黛西确只想跟他远走高飞。如果他能早点看透这点，可能就是另一个结局了吧。从凌晨四点到清晨，他讲述了自己传奇的一生，一切都像是在告别，他以为他会迎来跟黛西美好的明天，没想到迎来的确是一枚子弹。黛西最终还是没有看盖茨比最后一眼，选择了那个她不爱却又称之为丈夫的人。盖茨比也永远以盖茨比的身份和那个新闻上的假故事长埋地下，除了"他"没人会在提起他的故事。我想盖茨比应该是开心的吧，虽然最后误以为那个电话是黛西打来的，但是至少那一刻他是带着5年来等待的"结果"离去的。电影很讽刺，那些所谓的高贵血统，谁才是真正的杀人犯，谁又对谁的感情是忠贞不二？都是那么的脆弱，和不堪一击。盖茨比的葬礼无人参加，不正是这个社会的真实写照吗。</p>
+        </div>
+      </article>
+
+      <!-- 腾讯视频影评 -->
+      <article class="review-card" data-platform="腾讯视频" data-review-id="8">
+        <div class="review-header">
+          <span class="platform-badge tencent">腾讯视频</span>
+          <span class="author-name">景行</span>
+          <button class="bookmark-btn" data-review-id="8" title="收藏这条影评">
+            <span class="bookmark-icon">🔖</span>
+          </button>
+        </div>
+        <div class="review-content">
+          <p>我终于理解盖茨比的一生为何可以赢得尊重：他伪造的学历是为了与身份的旧俗做对，他伪饰的富豪是为了彰显美国梦创富梦的伟大，他伪装的职业是为了进入更加虚伪的上流社会，这一切的一切都是为了回到黛西家门前那一盏不灭的绿灯前。这就是他配的上了不起的原因。</p>
+          <p>看完之后也送给自己和大家一句话吧，毕竟自己有时候也喜欢不了解一个人就喜欢去评价别人。这句话就是《了不起的盖茨比》书上的那句：while you would like criticizing anyone,just remember that,all the people in the world haven't had the advantages that you have had.（当你想评价某人的时候，只需要记得，这个世界上并非所有人都有你这样好的出身条件）如果用世俗的片面标准去评价，我们将永远无法理解闪亮在黑夜的绿光</p>
+        </div>
+      </article>
+
+      <article class="review-card" data-platform="腾讯视频" data-review-id="9">
+        <div class="review-header">
+          <span class="platform-badge tencent">腾讯视频</span>
+          <span class="author-name">蓝儿瑾</span>
+          <button class="bookmark-btn" data-review-id="9" title="收藏这条影评">
+            <span class="bookmark-icon">🔖</span>
+          </button>
+        </div>
+        <div class="review-content">
+          <p>看到后面瞬间戳中泪点，盖茨是一个无比乐观的人，就像我无比乐观的开始看这部电影。盖茨每天举办奢华舞会只为吸引她的到来。黛茜口口声声说自己忘不了他，却又始终在他和汤姆之间摇摆不定。在我知道了纸条的内容，我仍然和盖茨一样的乐观，她最后的那一通电话也算是给盖茨生前的一个安稳吧。尼克打来的电话，我还在心里期冀着黛茜的转身，我安慰自己她也许不知道是谁打的电话，直到看到她特写的微笑，我就像是所有防线全部坍塌，像是呼吸时发现没有氧气的诧异到崩溃。他到头来只是贵妇来寻求刺激的一种消遣。再次听young and beautiful，我发现我是站在了盖茨角度，你是仍然爱着我的吧</p>
+        </div>
+      </article>
+
+      <article class="review-card" data-platform="腾讯视频" data-review-id="10">
+        <div class="review-header">
+          <span class="platform-badge tencent">腾讯视频</span>
+          <span class="author-name">小迷糊</span>
+          <button class="bookmark-btn" data-review-id="10" title="收藏这条影评">
+            <span class="bookmark-icon">🔖</span>
+          </button>
+        </div>
+        <div class="review-content">
+          <p>盖茨比的了不起在于，无论结果如何，他凭借勇气、决心、信念，持之以恒的坚持，做了他该做的，能做好的一切事情，唯独忽略了自己。他那么聪明不可能不知道坚持下去意味着什么，不是痴迷，而是他知道最坏的结局，依旧选择相信乐观、坚定信念。黛西只是支撑他信念的具化形象。没有获得好结局的原因，更多是他的孤注一掷，人性以及整个时代的悲剧。剧终他至少点燃了一个人——尼克，尼克把故事写下来，点燃了千千万万的我们。</p>
+        </div>
+      </article>
+
+      <article class="review-card" data-platform="腾讯视频" data-review-id="11">
+        <div class="review-header">
+          <span class="platform-badge tencent">腾讯视频</span>
+          <span class="author-name">辞浅</span>
+          <button class="bookmark-btn" data-review-id="11" title="收藏这条影评">
+            <span class="bookmark-icon">🔖</span>
+          </button>
+        </div>
+        <div class="review-content">
+          <p>太过深情即是一场悲剧。</p>
+          <p>尼克以局外人的身份目睹一切发生，盖茨比确实是个了不起的人，他赤诚热烈的追求自己所爱。买下城堡，宴请名流彻夜狂欢，不过是为了露西出现的一晚，他突破阶级，从无名小卒奋斗到此刻的高度，各种光环加持，成为上流社会真正的绅士。已经获得世俗意义上的成功，没有转身另寻他人，对那五年的情感仍旧执着。</p>
+          <p>盖茨比为爱情，露西为自己，尼克为友谊。</p>
+          <p>盖茨比死前还活在自己织就的梦里，以为是双向奔赴，他一直在等，等露西离婚，等她重新投向自己的怀抱，等着和爱的人共白首……他近乎疯狂的爱着露西，再见面时的笨拙，重新拥有时的欢喜，甚至于发怒的样子被露西看到时他紧张的安慰她，可爱的太深在爱情里就处于低位，这样的人没有魅力可言，深情给错了人就是袒露致命弱点，别人肆意伤害他。</p>
+          <p>露西想要是维持阶层，名利和优渥的生活，她选择嫁给汤姆一部分也是因为汤姆的富有，盖茨比的财富和汤姆不相上下，当汤姆说出盖茨比财富来源以及盖茨比发怒时，她后退了，可能她一开始就没选择他，爱在她看来并没有那么重要。</p>
+          <p>发生车祸，盖茨比想的是实情不要暴露，露西的丈夫却将罪责全部甩给盖茨比，她本人连他的葬礼都没出席，她的生活没受一丝影响，他却因爱丢了命，也失了名声。</p>
+        </div>
+      </article>
+
+      <article class="review-card" data-platform="腾讯视频" data-review-id="12">
+        <div class="review-header">
+          <span class="platform-badge tencent">腾讯视频</span>
+          <span class="author-name">牛大刀</span>
+          <button class="bookmark-btn" data-review-id="12" title="收藏这条影评">
+            <span class="bookmark-icon">🔖</span>
+          </button>
+        </div>
+        <div class="review-content">
+          <p>所以我会一直热爱纯粹又热烈的一切东西，如果说贵族阶级是区分资本的分水岭，但我相信很多平民都拥有比贵族更高尚的灵魂和对世界的理解。现在社会很多人说爱情不如追求权利、金钱、名誉，但这些能给人带来什么？是极致的狂欢还是落幕后寂静的满足感？这些都带不了。人唯一能感到满足的瞬间，便是满足当下所拥有的，知道自己想要什么而去追逐的东西。盖茨比最后没有得到黛西，没有进入到自己想要的社会阶级，但他其实已经拥有了一切。因为他知道自己想要什么，自己这辈子追逐的是什么。所以他了不起，了不起在于他清晰的知道自己想要什么，能不能得到另说。特别是他追逐的东西是集合了人性、资本、名誉、地位等方面的集合体。是非常复杂的"爱情"，他爱黛西，5年前纯粹的黛西，5年后复杂懦弱的黛西。他最后死了，死了也许对他是最好的结局。有些人活着，还不如死了。有些人死了，但一直活着。</p>
+        </div>
+      </article>
+
+      <article class="review-card" data-platform="腾讯视频" data-review-id="13">
+        <div class="review-header">
+          <span class="platform-badge tencent">腾讯视频</span>
+          <span class="author-name">Bambit</span>
+          <button class="bookmark-btn" data-review-id="13" title="收藏这条影评">
+            <span class="bookmark-icon">🔖</span>
+          </button>
+        </div>
+        <div class="review-content">
+          <p>盖茨比爱得太深了，又是在阶层底下的，本身的善良让他认为黛西的爱没有变，难以摸透上流阶层的的心思，真的可惜他这一份真心。结尾盖茨比的结局真的很遗憾。</p>
+        </div>
+      </article>
+
+      <article class="review-card" data-platform="腾讯视频" data-review-id="14">
+        <div class="review-header">
+          <span class="platform-badge tencent">腾讯视频</span>
+          <span class="author-name">愿世间美好时刻与你相伴</span>
+          <button class="bookmark-btn" data-review-id="14" title="收藏这条影评">
+            <span class="bookmark-icon">🔖</span>
+          </button>
+        </div>
+        <div class="review-content">
+          <p>当黛西说想私奔的时候，盖茨比犹豫了，因为他脱离不了自身的状况，但是当他决心抛去一切，只为了自己所爱的人的时候，黛西在被自己丈夫揭穿了盖茨比虚假的时候，她害怕了，她怕失去现有的生活，爱对她而言，只不过是空虚内心能遮挡的工具而已，当今社会何不是这样，美其名曰，为了爱而成家，然后发现生活的财米油盐，把自己压的喘不过气，空虚的内心就会找事情来填补，如此带来的结果，可想而知，所以啊，哪有什么真爱，能找到一个志趣相投，乐观向上的友人，才是真实可靠的，爱这个字：拆开就是手拉着手，像做好朋友生活在屋檐下而已，没有谁属于谁，只有谁更能让自己过的更开心，更舒适而已，天下没有不散的宴席，总有一个人要先走，珍惜当下更重要。</p>
+        </div>
+      </article>
+
+      <article class="review-card" data-platform="腾讯视频" data-review-id="15">
+        <div class="review-header">
+          <span class="platform-badge tencent">腾讯视频</span>
+          <span class="author-name">灿若宸星</span>
+          <button class="bookmark-btn" data-review-id="15" title="收藏这条影评">
+            <span class="bookmark-icon">🔖</span>
+          </button>
+        </div>
+        <div class="review-content">
+          <p>站在黛西的角度看，盖茨比是她的初恋情人，她曾为他付出热情；而且在收到盖茨比的回信之后，她也曾痛苦悲伤。其实我看不出来她真的有多么势利，她与盖茨比的人生，在我看来，悲剧的成分主要在于'错过'，而非'背叛'。因为汤姆最开始与黛西的相遇，确实产生了爱情的火花，盖茨比作为黛西的年少初恋，他们曾许下的诺言，确实有经不住时间考验的可能。盖茨比年少时的爱恋，当做了毕生的追求，但作为和盖茨比有阶级差距的黛西，本来成长环境就与盖茨比不同，而且在她的眼里，她和盖茨比的世界是隔着一层厚厚的障壁的，虽然在她心中，他确实代表着青涩的爱恋与美好，可是现实是，盖茨比因战争而与她相隔甚远，可她的生活还要继续，而且黛西所属的社会阶层注定会有许多社交活动，纸醉金迷的世界会将她最初的那些记忆推远。如果只把黛西当成一个普通的上游阶层的人，用写实而不是用爱情传奇的角度来看这部电影，黛西的选择是有其合理性的。她在挣扎，但结局依旧惨淡，美好而高尚的光华，似乎只是在几日忽现。同样，盖茨比的追求确实太过沉重，尤其是在已经有了稳定家庭的黛西面前，最初的惊喜与感动，到最后注定会变成逃避与惊恐。但更甚于此，甚至在所谓的稳定家庭之中，也有爱人出轨的裂痕。纸醉金迷的纷扰外界，阶级的眼光固化，被夹在中间的纠结等等，是不那么好处理的。话虽如此，但是黛西确实不能被完全称为一个坚守初心，矢志不渝的形象，在我看来，她与盖茨比更像是那个纸醉金迷时代一个的缩影。盖茨比是一个敢想敢做的伟大的人，是一位不折不扣的追梦人。把梦想烙进灵魂化成动力的人，真的很值得敬佩！虽然在最后他也有迷失方向，但这正是最真实的点，就从人物塑造的角度上来说，电影中，每一个人物都是真实而丰满的。但是这也体现出来了一个我认为是漏洞的点，就是因为他已经把梦想当做了自己人生的全部，或者说是占了大半部分，以至于他最后追到几乎唾手可得的时候，他开始迷茫了。追逐梦想的过程，永远激动人心。但得到之后，易经转折的那个点，后续就不得而知。而他要的确实是太多，近乎是步步紧逼，过度的热情让追寻的那个她无所适从。如果在他还未为她举办那无数次彻夜狂欢之前，他可以选择放下，可对于黛西的追求已经成为了他生命的全部。他规划的那个伊甸园已经让他无所适从，追到意中人以后的生活，他认为可以掌握，但是他却在离他愈近的梦想散发的光华中迷失了，忘记了黛西的感受，但却不可以说这不是一次伟大的爱的追寻!</p>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- 用户评论区 -->
+    <section class="user-comments-section" aria-label="用户评论区">
+      <div class="comments-header">
+        <h2 class="comments-title">
+          <span class="title-icon">✍️</span>
+          我的影评
+          <span class="comments-count" id="commentsCount">(0)</span>
+        </h2>
+        <button id="addCommentBtn" class="add-comment-btn">
+          <span class="btn-icon">➕</span>
+          <span class="btn-text">发表影评</span>
+        </button>
+      </div>
+
+      <div id="commentsList" class="comments-list">
+        <!-- 动态加载用户评论 -->
+      </div>
+
+      <div id="emptyComments" class="empty-comments">
+        <div class="empty-icon">📝</div>
+        <p>还没有发表影评</p>
+        <p class="empty-hint">点击上方按钮,分享你对《了不起的盖茨比》的看法</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- 评论弹窗 -->
+  <div id="commentModal" class="comment-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">
+          <span class="modal-icon">✍️</span>
+          发表影评
+        </h3>
+        <button class="modal-close" id="closeModal" aria-label="关闭">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="commentAuthor">昵称</label>
+          <input 
+            type="text" 
+            id="commentAuthor" 
+            class="form-input" 
+            placeholder="请输入你的昵称"
+            maxlength="20"
+          />
+        </div>
+        <div class="form-group">
+          <label for="commentContent">影评内容</label>
+          <textarea 
+            id="commentContent" 
+            class="form-textarea" 
+            placeholder="分享你对《了不起的盖茨比》的看法..."
+            rows="8"
+            maxlength="1000"
+          ></textarea>
+          <div class="char-count">
+            <span id="charCount">0</span>/1000
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn cancel-btn" id="cancelBtn">取消</button>
+        <button class="modal-btn submit-btn" id="submitBtn">发布</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="reviews-footer">
+    <div class="footer-divider" aria-hidden="true"></div>
+    <p>© 2025 Gatsby Experience · 致敬经典电影《了不起的盖茨比》</p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="返回顶部">↑</button>
+
+  <script src="js/reviews.js"></script>
+  <script src="js/background-music.js"></script>
+</body>
+</html>
