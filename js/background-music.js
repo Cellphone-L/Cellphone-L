@@ -13,7 +13,7 @@
 
   // 配置
   const CONFIG = {
-    musicUrl: 'assets/music/Lana Del Rey - Young And Beautiful.flac', // 音乐文件路径
+    musicUrl: 'https://github.com/Cellphone-L/Cellphone-L/releases/download/v1.0.0/Lana%20Del%20Rey%20-%20Young%20And%20Beautiful.flac', // 音乐文件路径
     excludePages: ['index.html', ''], // 排除的页面(首页)
     storageKeys: {
       isPlaying: 'bgm_is_playing',
