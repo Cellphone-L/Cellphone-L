@@ -13,7 +13,7 @@
 
   // 配置
   const CONFIG = {
-    musicUrl: 'https://files.catbox.moe/fkw1a4.flac', // 音乐文件路径 - Catbox CDN
+    musicUrl: 'assets/music/Lana Del Rey - Young And Beautiful(1).flac', // 音乐文件路径
     excludePages: ['index.html', ''], // 排除的页面(首页)
     storageKeys: {
       isPlaying: 'bgm_is_playing',
