@@ -23,6 +23,7 @@
 ├── theme-intro.html                    # 电影简介页
 ├── theme-plot.html                     # 故事走向页
 ├── theme-insight.html                  # 电影启迪页
+├── commentary.html                     # 电影解说页 🎬
 ├── characters.html                     # 人物介绍页
 ├── reviews.html                        # 影评精选页
 ├── bookmarks.html                      # 我的收藏页
@@ -47,8 +48,10 @@
 ├── assets/                             # 资源文件
 │   ├── images/                         # 图片资源
 │   │   └── gatsby-poster.png           # 电影海报
-│   └── media/                          # 媒体资源
-│       └── gatsby-party.mp4            # 派对视频
+│   ├── media/                          # 媒体资源
+│   │   └── gatsby-party.mp4            # 派对视频
+│   └── 电影解说/                       # 解说视频
+│       └── 黛西视角.mp4                # 黛西视角解说(本地)
 │
 ├── 电影人物图片及介绍以及影评/          # 素材文件夹
 │   ├── 盖茨比.webp
@@ -94,7 +97,8 @@
   - 📽️ 电影简介
   - 🎬 故事走向
   - 💡 电影启迪
-  - ◈ 人物介绍
+  - 🎥 电影解说 (新增)
+- 人物介绍快捷入口
 - 影评精选快捷入口
 - 我的收藏快捷入口
 
@@ -143,7 +147,38 @@
 - 高亮引用样式
 - 阅读体验优化
 
-### 6. 人物介绍页 (characters.html)
+### 6. 电影解说页 (commentary.html) 🎬 新增功能
+**三视角解说**：
+- 🔍 **尼克视角** (133 MB, GitHub托管)
+  - 旁观者的独特视角
+  - 冷静而富有同情心的叙述
+  - 揭示时代的虚华与真实
+  
+- 💚 **盖茨比视角** (82.3 MB, GitHub托管)
+  - 主角的深情执念
+  - 追逐绿光的梦想家
+  - 美国梦的幻灭历程
+  
+- 💎 **黛西视角** (21.51 MB, 本地文件)
+  - 女主的内心世界
+  - 爱情与现实的抉择
+  - 上流社会的冷漠与虚伪
+
+**功能特性**：
+- HTML5原生视频播放器
+- 完整的播放控制（播放/暂停/进度条/音量/全屏）
+- 预加载元数据优化加载速度
+- 响应式视频容器，适配各种屏幕
+- 精美的视觉设计与悬浮动画
+- 视角标签和详细介绍
+
+**技术亮点**：
+- **混合资源加载**：大文件托管GitHub Release，小文件本地存储
+- **CDN加速**：利用GitHub全球CDN加速视频加载
+- **优雅降级**：不支持HTML5的浏览器显示友好提示
+- **性能优化**：preload="metadata"仅预加载元数据
+
+### 7. 人物介绍页 (characters.html)
 **人物卡片**：
 - 🎩 杰伊·盖茨比 (Jay Gatsby)
 - 💎 黛西·布坎南 (Daisy Buchanan)
@@ -157,7 +192,21 @@
 - 翻转卡片交互
 - 3D悬停效果
 
-### 7. 影评精选页 (reviews.html) ⭐核心功能页面
+### 7. 人物介绍页 (characters.html)
+**人物卡片**：
+- 🎩 杰伊·盖茨比 (Jay Gatsby)
+- 💎 黛西·布坎南 (Daisy Buchanan)
+- 📝 尼克·卡拉威 (Nick Carraway)
+- 👔 汤姆·布坎南 (Tom Buchanan)
+
+**功能**：
+- 人物形象展示
+- 详细性格分析
+- 角色关系图谱
+- 翻转卡片交互
+- 3D悬停效果
+
+### 8. 影评精选页 (reviews.html) ⭐核心功能页面
 **影评来源**：
 - 豆瓣影评
 - B站评论
@@ -208,7 +257,7 @@
 - localStorage本地持久化
 - 数据完整性验证
 
-### 8. 我的收藏页 (bookmarks.html) ⭐核心管理页面
+### 9. 我的收藏页 (bookmarks.html) ⭐核心管理页面
 **统计面板**：
 - 📊 总收藏数
 - 📽️ 电影简介收藏数
@@ -245,6 +294,25 @@
 ---
 
 ## 技术特性
+
+### GitHub Release 资源托管
+为优化项目体积和加载速度，部分大型视频资源托管在GitHub Release：
+
+**托管文件**：
+- `nike.s.vision.mp4` (133 MB) - 尼克视角解说
+- `gatsby.s.vision.mp4` (82.3 MB) - 盖茨比视角解说
+
+**优势**：
+- ✅ 减小Git仓库体积，提升克隆速度
+- ✅ 利用GitHub全球CDN网络加速访问
+- ✅ 独立版本管理，方便后续更新
+- ✅ 不占用仓库LFS配额
+
+**访问方式**：
+```
+https://github.com/Cellphone-L/Cellphone-L/releases/download/v1.0.0/nike.s.vision.mp4
+https://github.com/Cellphone-L/Cellphone-L/releases/download/v1.0.0/gatsby.s.vision.mp4
+```
 
 ### 前端技术栈
 - **HTML5**: 语义化标签，无障碍设计
@@ -314,7 +382,8 @@
 3. **资源优化**:
    - 字体预加载(preconnect)
    - 图片懒加载
-   - 视频预加载控制
+   - 视频预加载控制(metadata)
+   - 大文件CDN托管(GitHub Release)
 
 4. **存储优化**:
    - LocalStorage数据压缩
@@ -449,10 +518,33 @@ bookmark_user_comment_{评论ID}
 ## 使用指南
 
 ### 快速开始
-1. 直接打开 `index.html`
-2. 点击"进入盖茨比的世界"
-3. 观看短片或点击任意处跳过
-4. 进入主题选择页开始探索
+1. **克隆项目**（可选）
+   ```bash
+   git clone https://github.com/Cellphone-L/Cellphone-L.git
+   ```
+
+2. **本地运行**
+   - 直接打开 `index.html`
+   - 或使用本地服务器（推荐）:
+     ```bash
+     # 使用Python
+     python -m http.server 8000
+     
+     # 使用Node.js
+     npx serve
+     ```
+
+3. **开始体验**
+   - 点击"进入盖茨比的世界"
+   - 观看短片或点击任意处跳过
+   - 进入主题选择页开始探索
+
+### 观看电影解说
+1. 访问"电影解说"页面
+2. 选择感兴趣的视角（尼克/盖茨比/黛西）
+3. 点击播放按钮开始观看
+4. 使用进度条调整播放位置
+5. 可调节音量或进入全屏模式
 
 ### 收藏内容
 1. 在主题页面，点击段落旁的🔖图标
@@ -487,7 +579,7 @@ bookmark_user_comment_{评论ID}
 - CSS Custom Properties
 - ES6+ JavaScript
 - LocalStorage
-- HTML5 Video
+- HTML5 Video（支持MP4格式）
 - backdrop-filter
 
 ### 降级方案
@@ -501,6 +593,7 @@ bookmark_user_comment_{评论ID}
 
 ### 1. 沉浸式体验设计
 - 从首页视频到主题页面的完整叙事流程
+- 多视角电影解说，深度解读角色心理
 - Art Deco风格贯穿始终
 - 金色主题象征1920年代的繁华
 
@@ -523,6 +616,7 @@ bookmark_user_comment_{评论ID}
 
 ### 5. 数据管理完善
 - LocalStorage持久化
+- GitHub Release托管大文件
 - 数据结构清晰
 - 导出备份功能
 - 完整的CRUD操作
@@ -546,11 +640,13 @@ bookmark_user_comment_{评论ID}
 - [ ] 代码分割和动态导入
 
 ### 内容扩展
+- [ ] 更多视角的电影解说
 - [ ] 更多影评来源
 - [ ] 电影花絮和幕后
 - [ ] 原著小说摘录
 - [ ] 时代背景资料
 - [ ] 音乐和配乐赏析
+- [ ] 经典台词赏析
 
 ### 用户体验
 - [ ] 深色/浅色主题切换
@@ -565,8 +661,12 @@ bookmark_user_comment_{评论ID}
 
 **项目名称**: 了不起的盖茨比 - 沉浸式电影体验网页  
 **开发日期**: 2025年11月  
+**最近更新**: 2025年11月21日 - 新增电影解说功能  
 **技术栈**: HTML5 + CSS3 + Vanilla JavaScript  
+**资源托管**: GitHub Release (大型视频文件)  
 **灵感来源**: 电影《了不起的盖茨比》(2013, 巴兹·鲁赫曼导演)  
+
+**在线访问**: [项目主页](https://github.com/Cellphone-L/Cellphone-L)
 
 ---
 
