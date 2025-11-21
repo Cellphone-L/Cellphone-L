@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="《了不起的盖茨比》电影解说" />
+  <title>电影解说 · 盖茨比的世界</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/theme-pages.css" />
+  <link rel="stylesheet" href="css/theme-enhanced.css" />
+  <link rel="stylesheet" href="css/theme-advanced.css" />
+  <link rel="stylesheet" href="css/music-control.css" />
+  <style>
+    .video-container {
+      margin: 32px 0;
+      border-radius: 16px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(247, 192, 92, 0.3);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .video-container:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 50px rgba(247, 192, 92, 0.2);
+      border-color: rgba(247, 192, 92, 0.5);
+    }
+
+    .video-player {
+      width: 100%;
+      max-height: 70vh;
+      display: block;
+      outline: none;
+      background: #000;
+    }
+
+    .video-player::-webkit-media-controls-panel {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+    }
+
+    .video-info {
+      padding: 24px;
+      background: linear-gradient(135deg, rgba(6, 7, 10, 0.85), rgba(26, 20, 16, 0.7));
+      border-top: 1px solid rgba(247, 192, 92, 0.2);
+    }
+
+    .video-title {
+      font-family: var(--font-heading, "Cinzel", serif);
+      font-size: 22px;
+      background: linear-gradient(135deg, rgba(247, 231, 173, 0.98), rgba(247, 192, 92, 0.95));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0 0 12px;
+      letter-spacing: 0.05em;
+    }
+
+    .video-description {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.8;
+      margin: 0;
+      text-align: justify;
+    }
+
+    .commentary-intro {
+      margin-bottom: 32px;
+      padding: 28px;
+      background: linear-gradient(135deg, rgba(247, 192, 92, 0.12), rgba(247, 192, 92, 0.08));
+      border-left: 4px solid var(--color-accent, #f7c05c);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .commentary-intro p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.9;
+      font-size: 16px;
+    }
+
+    .videos-section {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    /* 视角标签样式 */
+    .perspective-tag {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(247, 192, 92, 0.2);
+      border: 1px solid rgba(247, 192, 92, 0.4);
+      border-radius: 20px;
+      font-size: 13px;
+      color: rgba(247, 231, 173, 0.95);
+      margin-bottom: 12px;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+      .video-container {
+        margin: 24px 0;
+      }
+
+      .video-info {
+        padding: 20px;
+      }
+
+      .video-title {
+        font-size: 19px;
+      }
+
+      .video-description {
+        font-size: 14px;
+      }
+
+      .commentary-intro {
+        padding: 20px;
+        margin-bottom: 24px;
+      }
+
+      .videos-section {
+        gap: 36px;
+      }
+    }
+  </style>
+</head>
+<body class="theme-page-body" data-theme="commentary">
+  <div class="reading-progress" id="readingProgress"></div>
+  <header class="theme-page-header">
+    <a class="theme-page-brand" href="index.html">Gatsby Soirée</a>
+    <nav class="theme-page-nav" aria-label="主题导航">
+      <a href="themes.html">返回主题选择</a>
+      <a href="theme-intro.html">电影简介</a>
+      <a href="theme-plot.html">电影故事走向</a>
+      <a href="characters.html">◈ 人物介绍</a>
+      <a href="reviews.html">💬 影评精选</a>
+      <a href="bookmarks.html">🔖 我的收藏</a>
+    </nav>
+  </header>
+
+  <main class="theme-page-main" aria-labelledby="theme-page-title">
+    <section class="theme-banner" role="presentation"></section>
+    <section class="theme-content">
+      <h1 id="theme-page-title">电影解说</h1>
+      
+      <div class="theme-text-content">
+        <div class="commentary-intro">
+          <p>通过不同视角的电影解说，深入了解《了不起的盖茨比》中的人物心理与故事脉络。从旁观者尼克的独特视角、主角盖茨比的深情执念，到黛西的内心世界，全方位感受那个纸醉金迷的爵士时代。</p>
+        </div>
+
+        <div class="videos-section">
+          <!-- 尼克视角 -->
+          <div class="video-container">
+            <video class="video-player" controls preload="metadata">
+              <source src="https://github.com/Cellphone-L/Cellphone-L/releases/download/v1.0.0/nike.s.vision.mp4" type="video/mp4">
+              您的浏览器不支持 HTML5 视频播放。
+            </video>
+            <div class="video-info">
+              <span class="perspective-tag">旁观者视角</span>
+              <h2 class="video-title">尼克视角</h2>
+              <p class="video-description">
+                尼克·卡拉威作为故事的叙述者，以旁观者的身份见证了盖茨比的传奇人生。从初识盖茨比的神秘与华丽，到最终目睹美梦破碎的悲剧收场，尼克用他冷静而富有同情心的视角，为我们揭示了这个时代的虚华与真实。他既是参与者，又是观察者，在纸醉金迷的长岛之夜，保持着难得的清醒与诚实。
+              </p>
+            </div>
+          </div>
+
+          <!-- 盖茨比视角 -->
+          <div class="video-container">
+            <video class="video-player" controls preload="metadata">
+              <source src="https://github.com/Cellphone-L/Cellphone-L/releases/download/v1.0.0/gatsby.s.vision.mp4" type="video/mp4">
+              您的浏览器不支持 HTML5 视频播放。
+            </video>
+            <div class="video-info">
+              <span class="perspective-tag">主角视角</span>
+              <h2 class="video-title">盖茨比视角</h2>
+              <p class="video-description">
+                杰伊·盖茨比，一个为爱痴狂的梦想家。从贫寒少年到西卵富豪，他用尽一生追逐那道绿光——黛西。每一场奢华的派对，每一个孤独的夜晚，都是他为了重温旧梦而精心设计的舞台。在他眼中，金钱只是手段，黛西才是终极目标。这个视角让我们看到一个痴情男子的执着与悲凉，以及美国梦如何在现实面前幻灭。
+              </p>
+            </div>
+          </div>
+
+          <!-- 黛西视角 -->
+          <div class="video-container">
+            <video class="video-player" controls preload="metadata">
+              <source src="assets/电影解说/黛西视角.mp4" type="video/mp4">
+              您的浏览器不支持 HTML5 视频播放。
+            </video>
+            <div class="video-info">
+              <span class="perspective-tag">女主视角</span>
+              <h2 class="video-title">黛西视角</h2>
+              <p class="video-description">
+                黛西·布坎南，一个在爱情与现实之间摇摆的上流社会女性。她曾爱过盖茨比的纯真，却最终选择了汤姆的财富与地位。在她的视角中，我们看到一个被时代塑造的女性形象：既渴望真爱，又无法摆脱阶级的束缚。她的犹豫、退缩与最终的背离，揭示了那个时代上流社会的冷漠与虚伪，以及一个女人在梦想与现实之间的艰难抉择。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="theme-page-footer">
+    <a href="themes.html" class="secondary-link">返回主题选择页</a>
+    <p>© 2025 Gatsby Experience</p>
+  </footer>
+
+  <script src="js/theme-interactions.js"></script>
+  <script src="js/background-music.js"></script>
+</body>
+</html>
